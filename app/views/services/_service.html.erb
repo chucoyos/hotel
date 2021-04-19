@@ -1,0 +1,11 @@
+<%= turbo_frame_tag dom_id(service) do %>
+  <div class="card">
+    <div class="card-body <%= service.completed ? 'completed' : 'not-completed' %> ">
+      <h3 class="card-title"><%= service.title %></h3> </br>
+      <div class="btn-group float-right">
+        <%= link_to "Completo", update_completed_path(id: service.id, service: service), class: 'btn btn-secondary' %>
+        <%= button_to "Eliminar", service, method: :delete, class: 'btn btn-danger' %>
+      </div>
+    </div>
+  </div>
+<% end %>

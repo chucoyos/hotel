@@ -1,0 +1,22 @@
+// Place all the styles related to the services controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+.completed {
+    background-color: forestgreen;
+    color: whitesmoke;
+}
+
+.not-completed {
+    background-color: orangered;
+}
+
+.dark-input {
+    background-color: darkslategrey;
+    color: blanchedalmond;
+}
+
+.expanded {
+    margin-top: 24px;
+    margin-bottom: 24px;
+}
