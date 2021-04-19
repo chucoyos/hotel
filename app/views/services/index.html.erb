@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Servicios</h1>
+
+<%= turbo_stream_from "services" %>
+
+<%= turbo_frame_tag "service_form" do %>
+  <%= render 'form', service: @service %>
+<% end %>
+
+<%= turbo_frame_tag "services" do %>
+  <%= render @services %>
+<% end %>
+
+ 

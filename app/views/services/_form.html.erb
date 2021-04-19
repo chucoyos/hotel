@@ -1,0 +1,24 @@
+<%= form_with(model: service, id: dom_id(service)) do |form| %>
+  <% if service.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(service.errors.count, "error") %> Impidió que se creara el servicio</h2>
+
+      <ul>
+        <% service.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="mb-3 expanded">
+    <div class="field">
+      <%= form.label :Servicio, class: 'form-label' %>
+      <%= form.text_field :title, class: 'dark-input' %>
+    </div>
+
+
+    <div class="actions">
+      <%= form.submit class: 'btn btn-primary' %>
+    </div>
+  </div>
+<% end %>
