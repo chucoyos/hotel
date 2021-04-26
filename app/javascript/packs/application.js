@@ -14,3 +14,5 @@ ActiveStorage.start()
 import "controllers"
 import 'bootstrap/dist/js/bootstrap'
 import 'bootstrap/dist/css/bootstrap'
+
+Notification.requestPermission().then(function (result) {})
