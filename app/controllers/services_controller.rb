@@ -28,7 +28,8 @@ class ServicesController < ApplicationController
       if @service.save
         format.html { redirect_to services_url, notice: "El Servicio se Agregó Exitosamente." }
         format.json { render :show, status: :created, location: @service }
-        ActionCable.server.broadcast('service_channel', 'Tienes un Nuevo Servicio.')
+        ActionCable.server.broadcast('service_channel', "#{@service.title}")
+        
       else
         format.html { render :new, status: :unprocessable_entity }
         format.json { render json: @service.errors, status: :unprocessable_entity }
