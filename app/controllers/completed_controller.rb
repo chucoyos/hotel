@@ -4,6 +4,7 @@ class CompletedController < ApplicationController
     def update
         @service.completed = !@service.completed
         @service.save
+        redirect_to @service
     end
 
     def set_service
