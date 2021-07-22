@@ -42,7 +42,7 @@ class ServicesController < ApplicationController
   def update
     respond_to do |format|
       if @service.update(service_params)
-        format.turbo_stream { render turbo_stream: turbo_stream.replace(@service, partial: 'services/service', locals: { service: @service })}
+        #format.turbo_stream { render turbo_stream: turbo_stream.replace(@service, partial: 'services/service', locals: { service: @service })}
         format.html { redirect_to @service, notice: "El Servicio se Actualizó Exitosamente." }
         format.json { render :show, status: :ok, location: @service }
       else

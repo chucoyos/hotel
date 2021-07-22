@@ -1,13 +1,12 @@
-class CompletedController < ApplicationController
+class CompletedsController < ApplicationController
     before_action :set_service
 
     def update
         @service.completed = !@service.completed
         @service.save
-        redirect_to @service
     end
 
     def set_service
-        @service = Service.find(params[:id])
+        @service = Service.find(params[:service_id])
     end
 end
