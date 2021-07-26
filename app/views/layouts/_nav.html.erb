@@ -1,22 +1,22 @@
-<nav class="navbar navbar-expand-sm navbar-light bg-light">
-  <i class="fas fa-hotel"></i>
-  <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+<nav class="navbar navbar-expand-sm navbar-dark">
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="d-block mb-2 mt-2"><circle cx="12" cy="12" r="10"></circle><line x1="14.31" y1="8" x2="20.05" y2="17.94"></line><line x1="9.69" y1="8" x2="21.17" y2="8"></line><line x1="7.38" y1="12" x2="13.12" y2="2.06"></line><line x1="9.69" y1="16" x2="3.95" y2="6.06"></line><line x1="14.31" y1="16" x2="2.83" y2="16"></line><line x1="16.62" y1="12" x2="10.88" y2="21.94"></line></svg>
+  <button class="navbar-toggler d-lg-none bg-secondary" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
       aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-  <div class="collapse navbar-collapse" id="collapsibleNavId">
-    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+  <div class="collapse navbar-collapse bg-dark" id="collapsibleNavId">
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">  
       <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        <%= link_to 'Home', root_path, class: "nav-link" %>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
+        <%= link_to "Botones", services_path, class: "nav-link" %>
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
-        <div class="dropdown-menu" aria-labelledby="dropdownId">
-          <a class="dropdown-item" href="#">Action 1</a>
-          <a class="dropdown-item" href="#">Action 2</a>
+        <div class="dropdown-menu" aria-labelledby="dropdownId"> 
+          <%= link_to "Botones", services_path, class: "dropdown-item" %>
+          <%= link_to "Home", root_path, class: "dropdown-item" %>
         </div>
       </li>
     </ul>
@@ -26,6 +26,8 @@
     </form>
   </div>
 </nav>
+
+
 
 
 

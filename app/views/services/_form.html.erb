@@ -11,14 +11,15 @@
     </div>
   <% end %>
   <div class="mb-3 expanded">
-    <div class="field">
-      <%= form.label :Servicio, class: 'form-label' %>
-      <%= form.text_field :title, class: 'dark-input' %>
+
+    <div class="form-group">
+      <%= form.label :Servicio, class: '' %>
+      <%= form.text_field :title, class: 'bg-dark form-control', placeholder: 'Solicite un Servicio' %>
+      <small id="helpId" class="text-muted">Ingrese el Servicio Requerido de Botones</small>
     </div>
 
-
     <div class="actions">
-      <%= form.submit class: 'btn btn-primary' %>
+      <%= form.submit "Enviar", class: 'btn btn-primary' %>
     </div>
   </div>
 <% end %>
